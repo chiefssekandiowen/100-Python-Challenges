@@ -23,7 +23,7 @@ def para(text):
         if n[i] == m[i]:
             newword.append(n[i])
 
-        elif i != 0 and n[i] != m[i]:
+        elif n[i] != m[i]:
             newword.append("-")
     
     if newword == n:
