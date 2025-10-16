@@ -1,3 +1,14 @@
+"""
+Exercise 1: Palindrome 20 min
+Write a method to check if a given String is a palindrome. The method should be case
+insensitive, and spaces should be ignored.
+Bonus: Enhance the solution to be able to check only subparts of the string to be a
+palindrome with a left and right index border.
+
+    Created: Thur, 16th Oct 2025 - 7:43PM
+    @Author: Chief Ssekandi Owen
+"""
+
 word = input("Enter any word:...  ")
 
 def para(text):
@@ -14,11 +25,11 @@ def para(text):
 
         elif i != 0 and n[i] != m[i]:
             newword.append("-")
-
-        else:
-            print("Has no match")
-
-    return "".join(newword)
+    
+    if newword == n:
+        return True, "".join(newword)
+    else:
+        return False, "".join(newword)
 
 print(para(word))
 
